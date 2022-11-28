@@ -1,0 +1,25 @@
+@use "../abstract/mixins";
+@use "../abstract/variables";
+
+* {
+  font-family: variables.$ff;
+}
+
+h1 {
+  font-size: variables.$h1-fs;
+  color: variables.$headline-color;
+  font-weight: variables.$fw-bold;
+}
+h2 {
+  font-size: variables.$h2-fs;
+  color: variables.$headline-color;
+}
+h3 {
+  font-size: variables.$h3-fs;
+  color: variables.$headline-color;
+}
+p {
+  font-size: variables.$p-fs;
+  color: variables.$p-color;
+  font-weight: variables.$fw-regular;
+}
