@@ -1,0 +1,358 @@
+body, html {
+  font-size: 16px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+* {
+  font-family: "Exo 2";
+}
+
+h1 {
+  font-size: 2rem;
+  color: #001858;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: #001858;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #001858;
+}
+
+p {
+  font-size: 0.875rem;
+  color: #172c66;
+  font-weight: 400;
+}
+
+button {
+  width: 125px;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn--save {
+  background-color: #f582ae;
+  color: #001858;
+  box-shadow: 0 0 5px 0 #f582ae;
+  text-shadow: 0 0 3px 0px #8bd3dd;
+}
+
+.btn--save:hover {
+  background-color: #2F5CFE;
+  color: #D9D9D9;
+  box-shadow: 0 0 5px 0 #2f5cfe;
+}
+
+.btn--save:focus-visible {
+  background-color: #2F5CFE;
+  color: #D9D9D9;
+  box-shadow: 0 0 5px 0 #2f5cfe;
+}
+
+.delete-all {
+  text-align: end;
+  margin: 20px auto;
+}
+.delete-all .btn--delete-all {
+  background-color: #E22100;
+  color: #fff;
+  font-weight: 400;
+  box-shadow: 0 0 5px 0 #e22100;
+  text-shadow: 0 0 3px 0px white;
+}
+.delete-all .btn--delete-all:hover {
+  background-color: #E22151;
+  color: #fff;
+  box-shadow: 0 0 5px 0 #e22151;
+  text-shadow: 0 0 3px 0px white;
+}
+.delete-all .btn--delete-all:focus-visible {
+  background-color: #E22100;
+  color: #fff;
+  box-shadow: 0 0 5px 0 #e22100;
+  text-shadow: 0 0 3px 0px white;
+}
+
+.btn--delete {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 1px;
+  left: 140px;
+  background: none;
+}
+.btn--delete svg {
+  position: relative;
+  right: 6px;
+  bottom: 1px;
+  fill: #E22100;
+  opacity: 0.6;
+}
+.btn--delete svg:hover {
+  opacity: 1;
+}
+.btn--delete svg:focus-visible {
+  opacity: 1;
+}
+
+iframe {
+  border-radius: 15px 15px 0 0;
+}
+
+body {
+  background-color: #FEF6E4;
+}
+body .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #F3D2C1;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  background-color: #8BD3DD;
+  border-radius: 10px 10px 0 0;
+  padding: 40px 60px;
+}
+.header .headline {
+  width: 100%;
+  padding: 20px;
+}
+.header .tagline {
+  width: 70%;
+  padding: 20px;
+  font-weight: 600;
+}
+.header .controller {
+  position: relative;
+  margin: 0 auto;
+}
+.header .controller label {
+  display: grid;
+  place-content: center;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: max-content max-content;
+  grid-template-areas: "videoid videoid" "input btn";
+  gap: 15px;
+}
+.header .controller label h3 {
+  grid-area: videoid;
+  font-weight: 600;
+}
+.header .controller label #video-id {
+  grid-area: input;
+  border: 2px solid #001858;
+  border-radius: 6px;
+}
+.header .controller label input {
+  width: 200px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #172c66;
+  background-color: rgba(254, 246, 228, 0.8);
+  border: none;
+  outline: none;
+  text-align: center;
+}
+.header .controller label input::placeholder {
+  font-size: 1rem;
+  color: #172c66;
+  opacity: 0.6;
+  padding: 0 5px;
+}
+.header .controller label button {
+  grid-area: btn;
+}
+
+@media (max-width: 730px) {
+  .header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .header .headline {
+    text-align: center;
+  }
+  .header .tagline {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 530px) {
+  .header {
+    place-content: center;
+  }
+  .header .tagline {
+    width: 100%;
+  }
+  .header .controller label {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas: "videoid" "input" "btn";
+  }
+  .header .controller label h3 {
+    place-self: end start;
+  }
+  .header .controller label button {
+    width: 100%;
+  }
+  .header .btn--delete-all {
+    width: 100%;
+  }
+}
+.videocard-w {
+  display: grid;
+  position: relative;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 40px;
+  grid-template-columns: repeat(auto-fit, 320px);
+  place-content: center;
+  gap: 15px;
+}
+.videocard-w .videocard {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 320px;
+  height: 320px;
+  background-color: #FEF6E4;
+  border-radius: 15px;
+  box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+  gap: 15px;
+}
+.videocard-w .videocard .videocard--img {
+  width: 320px;
+  height: 180px;
+}
+.videocard-w .videocard .videocard--img img {
+  border-radius: 15px 15px 0 0;
+}
+.videocard-w .videocard .videocard--title {
+  font-weight: 600;
+  padding: 0 5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.videocard-w .videocard .videocard--channel-title {
+  padding: 0 5px;
+}
+.videocard-w .videocard .videocard--date {
+  position: absolute;
+  padding: 0 5px;
+  bottom: 15px;
+}
+.videocard-w .videocard .videocard--date svg {
+  position: relative;
+  bottom: -3px;
+}
+.videocard-w .videocard .videocard--duration {
+  position: absolute;
+  bottom: 15px;
+  right: 5px;
+}
+.videocard-w .videocard .videocard--duration svg {
+  position: relative;
+  bottom: -3px;
+}
+
+/*# sourceMappingURL=style.css.map */

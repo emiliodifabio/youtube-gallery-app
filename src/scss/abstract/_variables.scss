@@ -1,0 +1,45 @@
+// Typography
+%font-size-default {
+  font-size: 16px;
+}
+$ff: 'Exo 2';
+$h1-fs: 2rem;
+$h2-fs: 1.25rem;
+$h3-fs: 1rem;
+$p-fs: 0.875rem;
+$btn-fs: 1.25rem;
+$input-fs: 1.25rem;
+
+$fw-regular: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+// Color
+$primary-color: #F3D2C1;
+$secondary-color: #8BD3DD;
+$tertiary-color: #f582ae;
+
+$body-bg-color: #FEF6E4;
+$header-bg-color: $secondary-color;
+$container-card-color: $primary-color;
+$card-bg-color: #FEF6E4;
+
+$btn-bg-color: $tertiary-color;
+$btn-bg-hover: #2F5CFE;
+$btn-text-color: #001858;
+$btn-text-hover: #D9D9D9;
+$btn-delete-bg-color: #E22100;
+$btn-delete-bg-hover-color: #E22151;
+$btn-delete-text-color: #fff;
+$btn-delete-text-hover-color: #fff;
+
+$stroke-color: #001858;
+$input-text-color: #172c66;
+$placeholder-bg-color: $primary-color;
+
+$headline-color: #001858;
+$p-color: #172c66;
+
+// Decoration
+$reset-list-style-type: none;
+$text-shadow: 0 0 4px 0px rgba(#000000, 0.25);

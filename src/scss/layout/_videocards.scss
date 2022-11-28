@@ -1,0 +1,78 @@
+@use "../abstract/mixins";
+@use "../abstract/variables";
+
+.videocard-w {
+  display: grid;
+  position: relative;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 40px;
+  grid-template-columns: repeat(auto-fit, 320px);
+  place-content: center;
+  gap: 15px;
+
+  .videocard {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 320px;
+    height: 320px;
+    background-color: variables.$card-bg-color;
+    border-radius: 15px;
+    box-shadow: 0 4px 4px 0px rgba(#000000, 0.25);
+    gap: 15px;
+
+    .videocard--img {
+      width: 320px;
+      height: 180px;
+
+      img {
+        border-radius: 15px 15px 0 0;
+      }
+    }
+
+    .videocard--title {
+      font-weight: variables.$fw-semibold;
+      padding: 0 5px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      // text-shadow: variables.$text-shadow;
+    }
+
+    .videocard--channel-title {
+      padding: 0 5px;
+      // text-shadow: variables.$text-shadow;
+    }
+
+    .videocard--date {
+      position: absolute;
+      padding: 0 5px;
+      bottom: 15px;
+      // text-shadow: variables.$text-shadow;
+
+      svg {
+        position: relative;
+        bottom: -3px;
+        // width:15px;
+        // height:15px;
+      }
+    }
+
+    .videocard--duration {
+      position: absolute;
+      bottom: 15px;
+      right: 5px;
+      // text-shadow: variables.$text-shadow;
+
+      svg {
+        position: relative;
+        bottom: -3px;
+        // width:15px;
+        // height:15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@use "../abstract/mixins";
+@use "../abstract/variables";
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  background-color: variables.$header-bg-color;
+  border-radius: 10px 10px 0 0;
+  padding: 40px 60px;
+
+  .headline {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .tagline {
+    width: 70%;
+    padding: 20px;
+    font-weight: variables.$fw-semibold;
+  }
+
+  .controller {
+    position: relative;
+    margin: 0 auto;
+
+    label {
+      display: grid;
+      place-content: center;
+      grid-template-columns: max-content max-content;
+      grid-template-rows: max-content max-content;
+      grid-template-areas:
+        "videoid videoid"
+        "input btn";
+      gap: 15px;
+
+      h3 {
+        grid-area: videoid;
+        font-weight: variables.$fw-semibold;
+      }
+
+      #video-id {
+        grid-area: input;
+        border: 2px solid variables.$stroke-color;
+        border-radius: 6px;
+      }
+
+      input {
+        width: 200px;
+        font-size: variables.$input-fs;
+        font-weight: variables.$fw-semibold;
+        color: variables.$input-text-color;
+        background-color: rgba(variables.$body-bg-color, 0.8);
+        border: none;
+        outline: none;
+        text-align: center;
+      }
+      input::placeholder {
+        font-size: variables.$h3-fs;
+        color: variables.$p-color;
+        opacity: 0.6;
+        padding: 0 5px;
+      }
+
+      button {
+        grid-area: btn;
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    .headline {
+      text-align: center;
+    }
+
+    .tagline {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .header {
+    place-content: center;
+
+    .tagline {
+      width: 100%;
+    }
+
+    .controller {
+      label {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr;
+        grid-template-areas:
+          "videoid"
+          "input"
+          "btn";
+
+        h3 {
+          place-self: end start;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+    .btn--delete-all {
+      width: 100%;
+    }
+  }
+}

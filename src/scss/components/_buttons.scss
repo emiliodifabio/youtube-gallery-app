@@ -1,0 +1,81 @@
+@use "../abstract/mixins";
+@use "../abstract/variables";
+
+button {
+  width: 125px;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  font-size: variables.$btn-fs;
+  font-weight: variables.$fw-semibold;
+  cursor: pointer;
+}
+
+.btn--save {
+  background-color: variables.$btn-bg-color;
+  color: variables.$btn-text-color;
+  box-shadow: 0 0 5px 0 rgba(variables.$btn-bg-color, 1);
+  text-shadow: 0 0 3px 0px rgba(variables.$secondary-color, 1);
+}
+
+.btn--save:hover {
+  background-color: variables.$btn-bg-hover;
+  color: variables.$btn-text-hover;
+  box-shadow: 0 0 5px 0 rgba(variables.$btn-bg-hover, 1);
+}
+
+.btn--save:focus-visible {
+  background-color: variables.$btn-bg-hover;
+  color: variables.$btn-text-hover;
+  box-shadow: 0 0 5px 0 rgba(variables.$btn-bg-hover, 1);
+}
+
+.delete-all {
+  text-align: end;
+  margin: 20px auto;
+
+  .btn--delete-all {
+    background-color: variables.$btn-delete-bg-color;
+    color: variables.$btn-delete-text-color;
+    font-weight: variables.$fw-regular;
+    box-shadow: 0 0 5px 0 rgba(variables.$btn-delete-bg-color, 1);
+    text-shadow: 0 0 3px 0px rgba(variables.$btn-delete-text-color, 1);
+  }
+
+  .btn--delete-all:hover {
+    background-color: variables.$btn-delete-bg-hover-color;
+    color: variables.$btn-delete-text-hover-color;
+    box-shadow: 0 0 5px 0 rgba(variables.$btn-delete-bg-hover-color, 1);
+    text-shadow: 0 0 3px 0px rgba(variables.$btn-delete-text-color, 1);
+  }
+
+  .btn--delete-all:focus-visible {
+    background-color: variables.$btn-delete-bg-color;
+    color: variables.$btn-delete-text-color;
+    box-shadow: 0 0 5px 0 rgba(variables.$btn-delete-bg-color, 1);
+    text-shadow: 0 0 3px 0px rgba(variables.$btn-delete-text-color, 1);
+  }
+}
+
+.btn--delete {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 1px;
+  left: 140px;
+  background: none;
+
+  svg {
+    position: relative;
+    right: 6px;
+    bottom: 1px;
+    fill: variables.$btn-delete-bg-color;
+    opacity: 0.6;
+  }
+  svg:hover {
+    opacity: 1;
+  }
+  svg:focus-visible {
+    opacity: 1;
+  }
+}
