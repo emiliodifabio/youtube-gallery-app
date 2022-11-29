@@ -345,6 +345,7 @@ body .container {
 }
 .videocard-w .videocard .videocard--img img {
   border-radius: 15px 15px 0 0;
+  cursor: pointer;
 }
 .videocard-w .videocard .videocard--title {
   font-weight: 600;

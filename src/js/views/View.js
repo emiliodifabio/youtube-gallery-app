@@ -43,22 +43,20 @@ export default class View {
   showVideo() {
     this._parentEl.addEventListener("click", function (e) {
       e.preventDefault();
+      const target = e.target.closest(".videocard--img");
+      console.log("target", target);
+      if (target === null) return;
       const videoCard = e.target.closest(".videocard");
       console.log("videoCard", videoCard);
       if (!videoCard) return;
       const id = videoCard.getAttribute("data-id");
       const cover = videoCard.firstElementChild;
+      if (!cover) return;
       console.log("cover", cover);
 
       const iFrame = `<iframe class="iframe" width="320" height="180" src="https://www.youtube-nocookie.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 
       cover.innerHTML = iFrame;
-
-      const iframePlayer = document.querySelector(".iframe");
-      console.log("iframePlayer", iframePlayer);
-      const player = iframePlayer.closest(".videocard--img");
-      console.log("player", player);
-      if (!player) return;
     });
   }
 
