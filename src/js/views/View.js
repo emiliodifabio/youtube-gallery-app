@@ -44,16 +44,21 @@ export default class View {
     this._parentEl.addEventListener("click", function (e) {
       e.preventDefault();
       const videoCard = e.target.closest(".videocard");
+      console.log("videoCard", videoCard);
       if (!videoCard) return;
       const id = videoCard.getAttribute("data-id");
-      const image = document.querySelector(".img");
-      if (image == null) return;
+      const cover = videoCard.firstElementChild;
+      console.log("cover", cover);
 
-      const cover = image.closest(".videocard--img");
-
-      const iFrame = `<iframe width="320" height="180" src="https://www.youtube-nocookie.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      const iFrame = `<iframe class="iframe" width="320" height="180" src="https://www.youtube-nocookie.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 
       cover.innerHTML = iFrame;
+
+      const iframePlayer = document.querySelector(".iframe");
+      console.log("iframePlayer", iframePlayer);
+      const player = iframePlayer.closest(".videocard--img");
+      console.log("player", player);
+      if (!player) return;
     });
   }
 
