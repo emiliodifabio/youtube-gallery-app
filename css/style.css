@@ -166,14 +166,14 @@ button {
   width: 40px;
   height: 40px;
   position: absolute;
-  bottom: 1px;
+  bottom: 0px;
   left: 140px;
   background: none;
 }
 .btn--delete svg {
   position: relative;
-  right: 6px;
-  bottom: 1px;
+  right: 0px;
+  bottom: 0px;
   fill: #E22100;
   opacity: 0.6;
 }
@@ -188,6 +188,27 @@ iframe {
   border-radius: 15px 15px 0 0;
 }
 
+.spinner {
+  position: relative;
+  margin: 10px auto;
+  border: 5px solid #D9D9D9;
+  border-top: 5px solid #F3D2C1;
+  border-right: 5px solid #8BD3DD;
+  border-left: 5px solid #f582ae;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 body {
   background-color: #FEF6E4;
 }

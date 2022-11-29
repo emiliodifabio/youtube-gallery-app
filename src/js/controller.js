@@ -5,9 +5,9 @@ import videoView from "./views/videoView";
 import localVideoView from "./views/localVideoView";
 
 // PREVENT PAGE RELOAD
-// if (module.hot) {
-//   module.hot.accept();
-// }
+if (module.hot) {
+  module.hot.accept();
+}
 
 const loadVideos = async function () {
   try {
@@ -44,8 +44,10 @@ const loadVideos = async function () {
 
 const loadLocalVideos = async function () {
   try {
+    if (JSON.parse(localStorage.getItem("YouTubeVideoID")))
+      videoView.renderSpinnerLocal();
     await model.loadLocalVideoData();
-    localVideoView.render(model.state.videoCard);
+    localVideoView.renderLocal(model.state.videoCard);
     localVideoView.deleteAll();
     localVideoView.showDeleteAllBtn();
   } catch (error) {

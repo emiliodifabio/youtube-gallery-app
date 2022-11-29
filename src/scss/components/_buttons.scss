@@ -61,14 +61,14 @@ button {
   width: 40px;
   height: 40px;
   position: absolute;
-  bottom: 1px;
+  bottom: 0px;
   left: 140px;
   background: none;
 
   svg {
     position: relative;
-    right: 6px;
-    bottom: 1px;
+    right: 0px;
+    bottom: 0px;
     fill: variables.$btn-delete-bg-color;
     opacity: 0.6;
   }
