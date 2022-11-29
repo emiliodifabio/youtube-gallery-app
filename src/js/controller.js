@@ -44,8 +44,8 @@ const loadVideos = async function () {
 
 const loadLocalVideos = async function () {
   try {
-    if (JSON.parse(localStorage.getItem("YouTubeVideoID")))
-      videoView.renderSpinnerLocal();
+    if (localStorage.getItem("YouTubeVideoID") != undefined) return;
+    videoView.renderSpinnerLocal();
     await model.loadLocalVideoData();
     localVideoView.renderLocal(model.state.videoCard);
     localVideoView.deleteAll();
