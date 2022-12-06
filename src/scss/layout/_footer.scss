@@ -1,2 +1,22 @@
 @use "../abstract/mixins";
 @use "../abstract/variables";
+
+footer {
+  p {
+    text-align: center;
+    padding: 16px;
+
+    a {
+      font-weight: variables.$fw-semibold;
+      text-decoration: none;
+      color: variables.$btn-text-color;
+    }
+  }
+}
+
+footer {
+  a:hover {
+    text-decoration:underline;
+    text-decoration-style: double;
+  }
+}
