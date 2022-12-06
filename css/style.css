@@ -186,6 +186,15 @@ button {
   opacity: 1;
 }
 
+@media (max-width: 530px) {
+  .controller button {
+    width: 200px;
+    margin: 0 auto;
+  }
+  .controller .delete-all .btn--delete-all {
+    width: 150px;
+  }
+}
 iframe {
   border-radius: 15px 15px 0 0;
 }
@@ -318,10 +327,6 @@ body .container {
   }
   .header .controller label h3 {
     text-align: center;
-  }
-  .header .controller label button {
-    width: 200px;
-    margin: 0 auto;
   }
 }
 .videocard-w {

@@ -81,3 +81,18 @@ button {
     opacity: 1;
   }
 }
+
+@media (max-width: 530px) {
+  .controller {
+    button {
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    .delete-all {
+      .btn--delete-all {
+        width: 150px;
+      }
+    }
+  }
+}
