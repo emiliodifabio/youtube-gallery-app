@@ -36,6 +36,8 @@ const loadVideos = async function () {
       await model.loadVideoData(videoID);
       videoView.render(model.state.videoCard);
       videoView.showDeleteAllBtn();
+      // Scroll to cards
+      videoView.scrollToCards();
     });
   } catch (error) {
     console.error(error);

@@ -40,6 +40,10 @@ export default class View {
     this._parentEl.innerHTML = resetMarkup;
   }
 
+  scrollToCards() {
+    this._parentEl.scrollIntoView({ behavior: "smooth" });
+  }
+
   showVideo() {
     this._parentEl.addEventListener("click", function (e) {
       e.preventDefault();
