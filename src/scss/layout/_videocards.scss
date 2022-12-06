@@ -7,10 +7,10 @@
   max-width: 1200px;
   height: auto;
   margin: 0 auto;
-  padding: 40px;
+  padding: 32px;
   grid-template-columns: repeat(auto-fit, 320px);
   place-content: center;
-  gap: 15px;
+  gap: 16px;
 
   .videocard {
     display: flex;
@@ -21,7 +21,20 @@
     background-color: variables.$card-bg-color;
     border-radius: 15px;
     box-shadow: 0 4px 4px 0px rgba(#000000, 0.25);
-    gap: 15px;
+    animation-duration: 0.3s;
+    animation-name: slidein;
+
+    @keyframes slidein {
+      from {
+        translate: -200px;
+        opacity: 0;
+      }
+
+      to {
+        translate: 0px;
+        opacity: 1;
+      }
+    }
 
     .videocard--img {
       width: 320px;
@@ -30,49 +43,72 @@
       img {
         border-radius: 15px 15px 0 0;
         cursor: pointer;
+        animation-duration: 1s;
+        animation-name: fadein;
+      }
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
       }
     }
 
     .videocard--title {
       font-weight: variables.$fw-semibold;
-      padding: 0 5px;
+      padding: 0 20px;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
       overflow: hidden;
-      // text-shadow: variables.$text-shadow;
+      position: absolute;
+      left: 0px;
+      bottom: 87px;
+      animation-duration: 1s;
+        animation-name: fadein;
     }
 
     .videocard--channel-title {
-      padding: 0 5px;
-      // text-shadow: variables.$text-shadow;
+      position: absolute;
+      padding: 0 20px;
+      left: 0px;
+      bottom: 60px;
+      animation-duration: 1s;
+        animation-name: fadein;
     }
 
     .videocard--date {
       position: absolute;
-      padding: 0 5px;
-      bottom: 15px;
-      // text-shadow: variables.$text-shadow;
+      padding: 0 20px;
+      bottom: 17px;
+      animation-duration: 1s;
+        animation-name: fadein;
 
       svg {
         position: relative;
-        bottom: -3px;
-        // width:15px;
-        // height:15px;
+        bottom: 0px;
+        animation-duration: 1s;
+        animation-name: fadein;
       }
     }
 
     .videocard--duration {
       position: absolute;
-      bottom: 15px;
-      right: 5px;
-      // text-shadow: variables.$text-shadow;
+      padding: 0 20px;
+      bottom: 17px;
+      right: 0px;
+      animation-duration: 1s;
+        animation-name: fadein;
 
       svg {
         position: relative;
-        bottom: -3px;
-        // width:15px;
-        // height:15px;
+        bottom: 0px;
+        animation-duration: 1s;
+        animation-name: fadein;
       }
     }
   }

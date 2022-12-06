@@ -139,8 +139,8 @@ button {
 }
 
 .delete-all {
-  text-align: end;
-  margin: 20px auto;
+  text-align: center;
+  margin-top: 32px;
 }
 .delete-all .btn--delete-all {
   background-color: #E22100;
@@ -163,17 +163,19 @@ button {
 }
 
 .btn--delete {
-  width: 40px;
-  height: 40px;
+  display: grid;
+  width: 24px;
+  height: 24px;
   position: absolute;
-  bottom: 0px;
-  left: 140px;
+  bottom: 0;
+  place-content: center;
+  place-self: center;
   background: none;
+  animation-duration: 1s;
+  animation-name: fadein;
 }
 .btn--delete svg {
   position: relative;
-  right: 0px;
-  bottom: 0px;
   fill: #E22100;
   opacity: 0.6;
 }
@@ -226,22 +228,26 @@ body .container {
 
 .header {
   display: grid;
+  position: relative;
   grid-template-columns: 1fr 1fr;
   place-items: center;
   background-color: #8BD3DD;
   border-radius: 10px 10px 0 0;
-  padding: 40px 60px;
+  padding: 32px;
 }
 .header .headline {
   width: 100%;
-  padding: 20px;
+  padding-bottom: 8px;
 }
 .header .tagline {
-  width: 70%;
-  padding: 20px;
+  width: 80%;
   font-weight: 600;
 }
 .header .controller {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
   position: relative;
   margin: 0 auto;
 }
@@ -251,7 +257,7 @@ body .container {
   grid-template-columns: max-content max-content;
   grid-template-rows: max-content max-content;
   grid-template-areas: "videoid videoid" "input btn";
-  gap: 15px;
+  gap: 8px;
 }
 .header .controller label h3 {
   grid-area: videoid;
@@ -276,16 +282,16 @@ body .container {
   font-size: 1rem;
   color: #172c66;
   opacity: 0.6;
-  padding: 0 5px;
+  padding: 0 16px;
 }
 .header .controller label button {
   grid-area: btn;
 }
 
-@media (max-width: 730px) {
+@media (max-width: 768px) {
   .header {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
   }
   .header .headline {
     text-align: center;
@@ -307,14 +313,15 @@ body .container {
     grid-template-rows: auto 1fr 1fr;
     grid-template-areas: "videoid" "input" "btn";
   }
+  .header .controller label input {
+    margin: 0 auto;
+  }
   .header .controller label h3 {
-    place-self: end start;
+    text-align: center;
   }
   .header .controller label button {
-    width: 100%;
-  }
-  .header .btn--delete-all {
-    width: 100%;
+    width: 200px;
+    margin: 0 auto;
   }
 }
 .videocard-w {
@@ -323,10 +330,10 @@ body .container {
   max-width: 1200px;
   height: auto;
   margin: 0 auto;
-  padding: 40px;
+  padding: 32px;
   grid-template-columns: repeat(auto-fit, 320px);
   place-content: center;
-  gap: 15px;
+  gap: 16px;
 }
 .videocard-w .videocard {
   display: flex;
@@ -337,7 +344,18 @@ body .container {
   background-color: #FEF6E4;
   border-radius: 15px;
   box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
-  gap: 15px;
+  animation-duration: 0.3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    translate: -200px;
+    opacity: 0;
+  }
+  to {
+    translate: 0px;
+    opacity: 1;
+  }
 }
 .videocard-w .videocard .videocard--img {
   width: 320px;
@@ -346,35 +364,64 @@ body .container {
 .videocard-w .videocard .videocard--img img {
   border-radius: 15px 15px 0 0;
   cursor: pointer;
+  animation-duration: 1s;
+  animation-name: fadein;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .videocard-w .videocard .videocard--title {
   font-weight: 600;
-  padding: 0 5px;
+  padding: 0 20px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  position: absolute;
+  left: 0px;
+  bottom: 87px;
+  animation-duration: 1s;
+  animation-name: fadein;
 }
 .videocard-w .videocard .videocard--channel-title {
-  padding: 0 5px;
+  position: absolute;
+  padding: 0 20px;
+  left: 0px;
+  bottom: 60px;
+  animation-duration: 1s;
+  animation-name: fadein;
 }
 .videocard-w .videocard .videocard--date {
   position: absolute;
-  padding: 0 5px;
-  bottom: 15px;
+  padding: 0 20px;
+  bottom: 17px;
+  animation-duration: 1s;
+  animation-name: fadein;
 }
 .videocard-w .videocard .videocard--date svg {
   position: relative;
-  bottom: -3px;
+  bottom: 0px;
+  animation-duration: 1s;
+  animation-name: fadein;
 }
 .videocard-w .videocard .videocard--duration {
   position: absolute;
-  bottom: 15px;
-  right: 5px;
+  padding: 0 20px;
+  bottom: 17px;
+  right: 0px;
+  animation-duration: 1s;
+  animation-name: fadein;
 }
 .videocard-w .videocard .videocard--duration svg {
   position: relative;
-  bottom: -3px;
+  bottom: 0px;
+  animation-duration: 1s;
+  animation-name: fadein;
 }
 
 /*# sourceMappingURL=style.css.map */
