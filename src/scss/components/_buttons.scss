@@ -35,24 +35,20 @@ button {
   margin-top: 32px;
 
   .btn--delete-all {
-    background-color: variables.$btn-delete-bg-color;
+    background: none;
     color: variables.$btn-delete-text-color;
     font-weight: variables.$fw-regular;
-    box-shadow: 0 0 5px 0 rgba(variables.$btn-delete-bg-color, 1);
-    text-shadow: 0 0 3px 0px rgba(variables.$btn-delete-text-color, 1);
+    text-shadow: 0 0 1px 0px rgba(variables.$btn-delete-text-color, 1);
   }
 
   .btn--delete-all:hover {
-    background-color: variables.$btn-delete-bg-hover-color;
     color: variables.$btn-delete-text-hover-color;
-    box-shadow: 0 0 5px 0 rgba(variables.$btn-delete-bg-hover-color, 1);
-    text-shadow: 0 0 3px 0px rgba(variables.$btn-delete-text-color, 1);
+    text-shadow: 0 0 1px 0px rgba(variables.$btn-delete-text-hover-color, 1);
   }
 
   .btn--delete-all:focus-visible {
-    background-color: variables.$btn-delete-bg-color;
     color: variables.$btn-delete-text-color;
-    box-shadow: 0 0 5px 0 rgba(variables.$btn-delete-bg-color, 1);
+    box-shadow: 0 0 5px 0 rgba(variables.$btn-delete-text-color, 1);
     text-shadow: 0 0 3px 0px rgba(variables.$btn-delete-text-color, 1);
   }
 }
@@ -62,7 +58,7 @@ button {
   width: 24px;
   height: 24px;
   position: absolute;
-  bottom: 0;
+  bottom: 17px;
   place-content: center;
   place-self: center;
   background: none;
@@ -71,7 +67,7 @@ button {
 
   svg {
     position: relative;
-    fill: variables.$btn-delete-bg-color;
+    fill: variables.$btn-delete-text-color;
     opacity: 0.6;
   }
   svg:hover {

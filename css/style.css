@@ -143,23 +143,19 @@ button {
   margin-top: 32px;
 }
 .delete-all .btn--delete-all {
-  background-color: #E22100;
-  color: #fff;
+  background: none;
+  color: #E22100;
   font-weight: 400;
-  box-shadow: 0 0 5px 0 #e22100;
-  text-shadow: 0 0 3px 0px white;
+  text-shadow: 0 0 1px 0px #e22100;
 }
 .delete-all .btn--delete-all:hover {
-  background-color: #E22151;
-  color: #fff;
-  box-shadow: 0 0 5px 0 #e22151;
-  text-shadow: 0 0 3px 0px white;
+  color: #E22151;
+  text-shadow: 0 0 1px 0px #e22151;
 }
 .delete-all .btn--delete-all:focus-visible {
-  background-color: #E22100;
-  color: #fff;
+  color: #E22100;
   box-shadow: 0 0 5px 0 #e22100;
-  text-shadow: 0 0 3px 0px white;
+  text-shadow: 0 0 3px 0px #e22100;
 }
 
 .btn--delete {
@@ -167,7 +163,7 @@ button {
   width: 24px;
   height: 24px;
   position: absolute;
-  bottom: 0;
+  bottom: 17px;
   place-content: center;
   place-self: center;
   background: none;

@@ -2,7 +2,7 @@ import View from "./View";
 
 class VideoView extends View {
   _parentEl = document.querySelector(".videocard-w");
-  _videocard = document.querySelector('.videocard')
+  _videocard = document.querySelector(".videocard");
   _inputBox = document.getElementById("video-id");
   _btnSave = document.getElementById("btn--save");
   _btnDelete = document.querySelector(".btn--delete");
@@ -42,7 +42,11 @@ class VideoView extends View {
         </g>
     </g>
 </svg>
-        ${this._data.duration}
+${
+  this._data.duration.length < 5 && this._data.duration.slice(-2, -1) === ":"
+    ? this._data.duration.padStart(7, "00:00:0").padEnd(8, "0")
+    : this._data.duration.padStart(8, "00:00:00")
+}
       </p>
       <button class="btn--delete"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M7 21q-.825 0-1.412-.587Q5 19.825 5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413Q17.825 21 17 21Zm2-4h2V8H9Zm4 0h2V8h-2Z"/></svg></button>
     </li>
@@ -70,7 +74,7 @@ class VideoView extends View {
     this._btnSave.style.backgroundColor = "#E22100";
     this._btnSave.style.color = "#fff";
     this._btnSave.innerText = "ERROR!";
-    this._btnSave.focus({focusVisible:false});
+    this._btnSave.focus({ focusVisible: false });
     setTimeout(() => {
       this._clear();
       this._inputBox.style.fontSize = `1.25rem`;
@@ -80,7 +84,7 @@ class VideoView extends View {
       this._btnSave.style.backgroundColor = "#f582ae";
       this._btnSave.style.color = "#001858";
       this._btnSave.innerText = "SAVE!";
-      this._btnSave.focus({focusVisible:true});
+      this._btnSave.focus({ focusVisible: true });
     }, 1500);
   }
 }

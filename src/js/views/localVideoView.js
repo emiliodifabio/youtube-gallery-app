@@ -10,6 +10,7 @@ class LocalVideoView extends View {
     return `
     ${this._data
       .map((data) => {
+        console.log(data.duration.slice(1,-2));
         return `<li class="videocard" data-id="${data.id}">
         <div class="videocard--img">
         <img class= "img"
@@ -39,14 +40,15 @@ class LocalVideoView extends View {
             </g>
         </g>
     </g>
-</svg>
-        ${data.duration}
+    </svg>
+        ${data.duration.length < 5 && data.duration.slice(-2,-1) === ':' ? data.duration.padStart(7,'00:00:0').padEnd(8, '0') : data.duration.padStart(8, '00:00:00')}
       </p>
       <button class="btn--delete"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M7 21q-.825 0-1.412-.587Q5 19.825 5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413Q17.825 21 17 21Zm2-4h2V8H9Zm4 0h2V8h-2Z"/></svg></button>`;
       })
       .join("")}
     </li>
     `;
+
   }
 
   _generateResetMarkup() {
